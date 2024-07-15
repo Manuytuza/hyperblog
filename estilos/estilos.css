@@ -36,92 +36,79 @@ body
 {
 font-size: 20px;
 }
-header {
-    background-color: #007bff; /* Color de fondo */
-    color: #ffffff; /* Color del texto */
-    padding: 15px 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del encabezado */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-/* Contenedor Principal del Header */
-header .container {
+/* Contenedor Principal */
+footer .container {
     max-width: 1200px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
-/* Logo del Header */
-.header-logo a {
-    font-size: 1.6em; /* Tamaño de fuente del logo */
-    font-weight: bold; /* Negrita en el logo */
-    color: #ffffff; /* Color del texto del logo */
-    text-decoration: none; /* Sin subrayado */
+/* Sección del Footer */
+.footer-section {
+    margin: 10px;
+    flex: 1;
 }
 
-/* Navegación Principal */
-.header-nav ul {
-    list-style: none; /* Eliminar viñetas */
-    margin: 0;
-    padding: 0;
-    display: flex;
+/* Títulos de las Secciones */
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.header-nav li {
-    margin: 0 15px; /* Espaciado entre los elementos del menú */
+/* Estilo de Texto y Enlaces */
+.footer-section p,
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
 }
 
-.header-nav a {
-    color: #ffffff; /* Color del texto de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 1em; /* Tamaño de fuente */
-    transition: color 0.3s ease; /* Transición suave para el color */
+/* Efecto Hover en Enlaces */
+.footer-section a:hover {
+    color: #f4f4f4;
 }
 
-.header-nav a:hover {
-    color: #e2e6ea; /* Color del texto al pasar el mouse */
+/* Estilo de Redes Sociales */
+.footer-socials a {
+    margin: 0 10px;
+    color: #ddd;
+    font-size: 1.5em;
 }
 
-/* Iconos Sociales */
-.header-socials a {
-    margin: 0 10px; /* Espaciado entre iconos */
-    color: #ffffff; /* Color del icono */
-    font-size: 1.3em; /* Tamaño del icono */
-    transition: color 0.3s ease; /* Transición suave para el color */
+/* Efecto Hover en Redes Sociales */
+.footer-socials a:hover {
+    color: #f4f4f4;
 }
 
-.header-socials a:hover {
-    color: #e2e6ea; /* Color del icono al pasar el mouse */
+/* Sección Inferior del Footer */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    text-align: center;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .header-nav ul {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-        background-color: #007bff; /* Fondo para el menú en móvil */
-    }
-
-    .header-nav.active ul {
-        display: flex;
-    }
-
-    .header-nav li {
-        margin: 10px 0; /* Espaciado vertical en el menú móvil */
-        text-align: center; /* Centrar el texto del menú en móvil */
-    }
-
-    .header-logo {
+    .footer-section {
+        flex: 100%;
         text-align: center;
-    }
-
-    .header-socials {
-        text-align: center;
-        margin-top: 10px;
     }
 }
